@@ -20,12 +20,11 @@ import Icon from 'react-native-vector-icons/Ionicons';
 export default class ArtistBox extends Component<{}> {
 
   render() {
-    const image = "https://static.platzi.com/media/files/bowie_a927fdf3-b321-4a5c-99ca-239cc86c57bc.png";
-    const name = 'David Bowie'
+
+    const { image, name, likes, comments } = this.props.artist
+
     const likeIcon = (<Icon name="ios-heart-outline" size={30} color="gray" />)
-    const likes = 200
     const commentIcon = (<Icon name="ios-chatboxes-outline" size={30} color="gray" />)
-    const comments = 140
 
     return (
       <View style={styles.artist}>
