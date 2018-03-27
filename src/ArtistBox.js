@@ -53,8 +53,15 @@ const styles = StyleSheet.create({
     height: 150,
   },
   artist: {
+    margin: 5,
     backgroundColor: 'white',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    shadowColor: 'black',
+    shadowOpacity: .1,
+    shadowOffset: {
+      height: 1,
+      width: -2,
+    }
   },
   info: {
     flex: 1,

@@ -12,13 +12,15 @@ import {
   View,
   Button,
   Alert,
-  Image
+  Image,
+  ScrollView,
+  FlatList
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 import ArtistBox from './ArtistBox'
 
-export default class App extends Component<{}> {
+export default class ArtistList extends Component<{}> {
 
   render() {
 
@@ -32,9 +34,10 @@ export default class App extends Component<{}> {
     const commentIcon = (<Icon name="ios-chatboxes-outline" size={30} color="gray" />)
 
     return (
-      <View style={styles.container}>
-        <ArtistBox artist={artist} />
-      </View>
+      <FlatList
+      data={Array(500).fill(artist)}
+      renderItem = { artist => <ArtistBox artist = {artist} /> }
+     />
     );
   }
 }
